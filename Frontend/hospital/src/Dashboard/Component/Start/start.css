@@ -1,0 +1,27 @@
+.loginPage {
+        padding: 20px;
+      }
+      
+      .loginForm {
+        max-width: 100%;
+        width: 100%;
+      }
+      
+      @media (min-width: 576px) {
+        .loginForm {
+          width: 75%;
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .loginForm {
+          width: 50%;
+        }
+      }
+      
+      @media (min-width: 992px) {
+        .loginForm {
+          width: 25%;
+        }
+      }
+      
