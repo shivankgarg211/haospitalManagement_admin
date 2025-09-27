@@ -168,6 +168,9 @@ export default function Home() {
   const handlePrescription = () => {
     navigate("/prescription");
   };
+  const handleTest = () => {
+    navigate("/test");
+  };
 
   return (
     <Box sx={{ display: "flex", height: '100vh' }}>
@@ -500,6 +503,30 @@ export default function Home() {
                   }}
                 >
                   <NoteAltIcon onClick={handlePrescription} />
+                </ListItemIcon>
+                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <List style={{ background: "#50DEC2",height:"100%" }}>
+          {["Test"].map((text, index) => (
+            <ListItem key={text} disablePadding sx={{ display: "block" }} onClick={handleTest}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? "initial" : "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  <NoteAltIcon onClick={handleTest} />
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>

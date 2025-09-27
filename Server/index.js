@@ -47,9 +47,14 @@ app.use('/', treatment)
 const appointment = require("./Route/Appointment_Route/tbl_hsptl_appointment_route")
 app.use('/', appointment)
 
-const confirm = require("./Route/Confirm_Appointment_Route/confirm_appointment_Route");
+const patientPrescription = require("./Route/Prescription/prescriptionRoute")
+app.use('/', patientPrescription)
 
+const confirm = require("./Route/Confirm_Appointment_Route/confirm_appointment_Route");
 app.use('/', confirm)
+
+const test = require('./Route/TestRoute/TestRoute');
+app.use("/",test)
 
 const port = process.env.PORT;
 

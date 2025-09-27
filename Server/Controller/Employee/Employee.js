@@ -170,7 +170,7 @@ const employeeLogin = (req, res) => {
             const role = user.roles;
             const token = jwt.sign({ roles: role, email: email }, 'jwt_secret_key', { expiresIn: '1d' });
             res.cookie('shivank', token);
-            console.log("Login successful, token generated:", token);
+            // console.log("Login successful, token generated:", token);
             return res.json({ loginStatus: true });
           } else {
             console.log("Invalid password for email:", req.body.email);

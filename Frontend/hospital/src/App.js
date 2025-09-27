@@ -16,6 +16,8 @@ import Appointment from './Dashboard/Component/Appointment/Appointment.jsx'
 import Login from './Dashboard/Component/Login/Login.jsx'
 import axios from 'axios'
 import Prescription from './Dashboard/Component/Prescription/Prescription.jsx'
+import Test from './Dashboard/Component/Test/Test.jsx'
+
 
 function App() {
   axios.defaults.withCredentials = true;
@@ -37,6 +39,8 @@ function App() {
        <Route path='/treatment' element={<Treatment/>}></Route>
        <Route path='/appointment' element={<Appointment/>}></Route>
        <Route path='/prescription' element={<Prescription/>}></Route>
+       <Route path='/test' element={<Test/>}></Route>
+     
        </Route>
       </Routes>
       </BrowserRouter>
